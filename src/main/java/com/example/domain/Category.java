@@ -16,8 +16,6 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
-@Getter
-@Setter
 public class Category {
 
     @Id

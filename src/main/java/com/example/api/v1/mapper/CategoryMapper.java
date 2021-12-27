@@ -11,7 +11,7 @@ import org.mapstruct.factory.Mappers;
  * @since 14/12/21
  */
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface CategoryMapper {
 
     CategoryMapper INSTANCE = Mappers.getMapper(CategoryMapper.class);

@@ -10,14 +10,15 @@ import javax.persistence.Id;
 /**
  * @author <a href="pulkit.aggarwal@upgrad.com">Pulkit Aggarwal</a>
  * @version 1.0
- * @since 14/12/21
+ * @since 28/12/21
  */
 @Data
 @Entity
-public class Category {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String firstname;
+    private String lastname;
 }

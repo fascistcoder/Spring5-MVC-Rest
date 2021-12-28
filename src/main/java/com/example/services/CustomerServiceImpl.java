@@ -2,6 +2,7 @@ package com.example.services;
 
 import com.example.api.v1.mapper.CustomerMapper;
 import com.example.api.v1.model.CustomerDTO;
+import com.example.domain.Customer;
 import com.example.repositories.CustomerRepository;
 import org.springframework.stereotype.Service;
 
@@ -36,5 +37,19 @@ public class CustomerServiceImpl implements CustomerService{
                 .stream()
                 .map(customerMapper::customerToCustomerDTO)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public CustomerDTO createNewCustomer(CustomerDTO customerDTO) {
+        Customer customer = customerMapper.customerDTOToCustomer(customerDTO);
+
+        Customer savedCustomer = customerRepository.save(customer);
+
+        CustomerDTO returnDTO = customerMapper.customerToCustomerDTO(savedCustomer);
+
+        returnDTO.setCustomerUrl("/api/v1/customer/" + savedCustomer.getId());
+
+        return returnDTO;
+
     }
 }

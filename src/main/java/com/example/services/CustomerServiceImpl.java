@@ -4,7 +4,6 @@ import com.example.api.v1.mapper.CustomerMapper;
 import com.example.api.v1.model.CustomerDTO;
 import com.example.domain.Customer;
 import com.example.repositories.CustomerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -86,5 +85,10 @@ public class CustomerServiceImpl implements CustomerService{
 
             return returnDto;
         }).orElseThrow(RuntimeException::new); //todo implement better exception handling;
+    }
+
+    @Override
+    public void deleteCustomerById(Long id) {
+        customerRepository.deleteById(id);
     }
 }

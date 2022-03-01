@@ -1,6 +1,7 @@
 package com.example.controllers.v1;
 
 import com.example.api.v1.model.CategoryDTO;
+import com.example.controllers.RestResponseEntityExceptionHandler;
 import com.example.services.CategoryService;
 import com.example.services.ResourceNotFoundException;
 import org.junit.jupiter.api.BeforeEach;

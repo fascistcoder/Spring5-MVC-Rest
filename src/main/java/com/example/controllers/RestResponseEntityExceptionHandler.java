@@ -1,4 +1,4 @@
-package com.example.controllers.v1;
+package com.example.controllers;
 
 import com.example.services.ResourceNotFoundException;
 import org.springframework.http.HttpHeaders;

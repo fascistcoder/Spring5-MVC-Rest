@@ -3,6 +3,8 @@ package com.example.controllers.v1;
 import com.example.api.v1.model.CustomerDTO;
 import com.example.api.v1.model.CustomerListDTO;
 import com.example.services.CustomerService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @version 1.0
  * @since 28/12/21
  */
+@Tag(name = "customer-controller", description = "This is the customer controller")
 @RestController
 @RequestMapping(CustomerController.BASE_URL)
 public class CustomerController {
@@ -22,6 +25,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
+    @Operation(summary = "this will get list of customers", description = "some notes about the customer")
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public CustomerListDTO getAllCustomers() {

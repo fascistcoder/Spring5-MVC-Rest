@@ -3,6 +3,8 @@ package com.example.controllers.v1;
 import com.example.api.v1.model.VendorDTO;
 import com.example.api.v1.model.VendorListDTO;
 import com.example.services.VendorService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
  * @version 1.0
  * @since 02/03/22
  */
+@Tag(name = "vendor-controller", description = "This is the vendor controller")
 @RestController
 @RequestMapping(VendorController.BASE_URL)
 public class VendorController {
@@ -22,6 +25,7 @@ public class VendorController {
         this.vendorService = vendorService;
     }
 
+    @Operation(summary = "this will get list of vendors", description = "ome notes about the vendor")
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public VendorListDTO getAllVendors(){

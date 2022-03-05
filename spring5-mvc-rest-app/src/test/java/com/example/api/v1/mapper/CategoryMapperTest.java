@@ -2,9 +2,7 @@ package com.example.api.v1.mapper;
 
 import com.example.api.v1.model.CategoryDTO;
 import com.example.domain.Category;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 

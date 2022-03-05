@@ -2,7 +2,6 @@ package com.example.api.v1.mapper;
 
 import com.example.api.v1.model.CustomerDTO;
 import com.example.domain.Customer;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

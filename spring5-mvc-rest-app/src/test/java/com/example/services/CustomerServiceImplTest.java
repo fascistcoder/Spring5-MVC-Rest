@@ -4,7 +4,6 @@ import com.example.api.v1.mapper.CustomerMapper;
 import com.example.api.v1.model.CustomerDTO;
 import com.example.domain.Customer;
 import com.example.repositories.CustomerRepository;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

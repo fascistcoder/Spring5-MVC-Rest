@@ -2,7 +2,6 @@ package com.example.services;
 
 import com.example.api.v1.mapper.VendorMapper;
 import com.example.api.v1.model.VendorDTO;
-import com.example.api.v1.model.VendorListDTO;
 import com.example.domain.Vendor;
 import com.example.repositories.VendorRepository;
 import org.junit.jupiter.api.BeforeEach;
